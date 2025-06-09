@@ -9,6 +9,7 @@ const UserModal = ({ user, onClose }) => {
     name: user.name || "",
     email: user.email || "",
     role: user.role || "user",
+    userRole: user.userRole || "promote",
   });
 
   const handleChange = (e) => {
@@ -64,6 +65,16 @@ const UserModal = ({ user, onClose }) => {
             <option value="user">User</option>
             <option value="admin">Admin</option>
             <option value="manager">Manager</option>
+          </select>
+
+          <select
+            name="userRole"
+            value={formData.userRole}
+            onChange={handleChange}
+            className="w-full border px-3 py-2 rounded"
+          >
+            <option value="promote">Promote</option>
+            <option value="demote">Demote</option>
           </select>
         </div>
 

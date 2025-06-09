@@ -56,6 +56,7 @@ const UsersTable = () => {
             <th className="p-2">Name</th>
             <th className="p-2">Email</th>
             <th className="p-2">Role</th>
+            <th className="p-2">User Role </th>
             <th className="p-2">Actions</th>
           </tr>
         </thead>
@@ -65,6 +66,7 @@ const UsersTable = () => {
               <td className="p-2">{user.name}</td>
               <td className="p-2">{user.email}</td>
               <td className="p-2">{user.role}</td>
+              <td className="p-2">{user.userRole} </td>
               <td className="p-2 space-x-2">
                 <button
                   onClick={() => handleCreateTask(user)}
